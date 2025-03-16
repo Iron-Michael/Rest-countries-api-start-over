@@ -1,0 +1,7 @@
+/* เพิ่มเข้าไปในไฟล์ CSS หลัก เช่น index.css หรือ app.css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0; /* ลบ margin ที่มาพร้อมกับบาง element เช่น body หรือ div */
+}

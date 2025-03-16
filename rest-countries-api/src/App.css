@@ -1,0 +1,49 @@
+
+
+
+.bg-foundation{
+  background-color: hsl(207, 26%, 17%);
+  width: 375px;
+  height: 900px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+
+.navigation-bg{
+  background-color: hsl(209, 23%, 22%);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.box-navigation{
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  font-weight: bold;
+  color: hsl(0, 0%, 100%)
+  
+}
+
+
+
+
+
+
+
+/* Desktop */
+/* 
+
+@media (min-width: 1024px) {
+  .bg-foundation{
+  background-color: hsl(207, 26%, 17%);
+  width: 1440px;
+  height: 900px
+}
+
+
+} */
