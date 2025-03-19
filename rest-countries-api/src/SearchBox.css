@@ -1,0 +1,140 @@
+.search-box-dark {
+  display: flex;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 8px 12px;
+  border-radius: 2px;
+  width: 95%;
+  margin-top: 5%;
+}
+
+.search-box-light {
+  display: flex;
+  align-items: center;
+  background-color: hsl(0, 0%, 98%);
+  padding: 8px 12px;
+  border-radius: 2px;
+  width: 95%;
+  margin-top: 5%;
+  box-shadow: 1px solid hsl(0, 0%, 52%);
+}
+
+.search-icon-dark {
+  margin-right: 10px;
+  color: white;
+}
+
+.search-icon-light {
+  margin-right: 10px;
+  color: black;
+}
+
+.search-input-dark {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.search-input-light {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: black;
+  font-size: 16px;
+}
+
+.filter-input-dark {
+  flex: 1;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  background-color: #2c3e50;
+}
+
+.filter-input-light {
+  flex: 1;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 16px;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.flag-country{
+    width: 100%;
+   
+}
+
+.display-information-dark{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(209, 23%, 22%);
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    padding-bottom: 10%;
+}
+
+.display-information-light{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 98%);
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    padding-bottom: 10%;
+}
+
+
+
+.native-information{
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 10px;
+    
+}
+
+.country-name-dark{
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.country-name-light{
+  font-size: 16px;
+    font-weight: 800;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.label-and-data-dark{
+  display: flex;
+  justify-content: space-between;
+}
+
+.label-and-data-light{
+  display: flex;
+  justify-content: space-between;
+}
+
+.label-and-data-dark label{
+  color: white;
+}
+
+.label-and-data-light label{
+  color: black;
+}

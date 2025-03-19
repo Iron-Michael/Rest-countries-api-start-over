@@ -1,17 +1,27 @@
-import React from 'react'
-import moonMode from '../assets/moon-svgrepo-com.svg'
-import Moon from '../assets/moon'
+import React, { useState } from "react";
+import Moon from "../assets/moon";
 
-const Navbar = () => {
+const Navbar = ({isDarkMode,setIsDarkMode}) => {
+
+
+  const toggleMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle("light-mode");
+  };
+
   return (
     <div className="navigation-bg">
-        <div className="box-navigation">
-            <div>Where in the world? </div>
-            <div style={{display:"flex",justifyContent:"center",}}> <Moon /> Dark Mode</div>
-        </div>
-
+      <div className="box-navigation">
+        <div className={`search-advice-dark ${isDarkMode ? "" : "search-advice-light"}`}>Where in the world?</div>
+        <button
+          className={`dark-mode-btn ${isDarkMode ? "" : "light-mode-btn"}`}
+          onClick={toggleMode}
+        >
+          <Moon /> {isDarkMode ? "Dark Mode" : "Light Mode"}
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+
+
 /* เพิ่มเข้าไปในไฟล์ CSS หลัก เช่น index.css หรือ app.css */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0; /* ลบ margin ที่มาพร้อมกับบาง element เช่น body หรือ div */
+  font-family: "Nunito Sans", sans-serif;;
 }
+
