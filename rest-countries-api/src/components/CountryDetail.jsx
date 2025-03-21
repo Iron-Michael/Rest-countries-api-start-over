@@ -37,12 +37,15 @@ const CountryDetail = ({ isDarkMode }) => {
   if (!country) return <p>Loading...</p>;
   return (
     <div className={isDarkMode ? 'country-detail-dark' : 'country-detail-light'}>
-      <button onClick={() => navigate(-1)} className="back-button">⬅ Back</button>
-      
+      <div className='position-back-button'>
+      <button onClick={() => navigate(-1)} className={isDarkMode?"back-button-dark":"back-button-light"}>⬅ Back</button>
+       </div> 
       <div className="country-container">
+        <div className='space-image-display'>
         <img src={country.flags.png} className="country-flag" alt="flag" />
+        </div>
         <div className="country-info">
-          <h2>{country.name.common}</h2>
+          <h2 style={{textAlign:"left"}}>{country.name.common}</h2>
           <p><strong>Native Name:</strong> {Object.values(country.name.nativeName)[0].common}</p>
           <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
           <p><strong>Region:</strong> {country.region}</p>

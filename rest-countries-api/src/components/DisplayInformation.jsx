@@ -7,7 +7,7 @@ const DisplayInformation = ({ isDarkMode }) => {
   const [countries, setCountries] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('');
-  const [loadCount, setLoadCount] = useState(20);
+  const [loadCount, setLoadCount] = useState(8);
   const loaderRef = useRef(null);
   const navigate = useNavigate(); 
 
@@ -48,7 +48,7 @@ const DisplayInformation = ({ isDarkMode }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
-        setLoadCount(prev => prev + 20);
+        setLoadCount(prev => prev + 8);
       }
     }, { threshold: 1 });
 
@@ -62,17 +62,19 @@ const DisplayInformation = ({ isDarkMode }) => {
   return (
     <>
       {/* กล่องค้นหา */}
+      <div className='search-and-filter-position'>
       <SearchBox isDarkMode={isDarkMode} onSearchChange={onSearchChange} />
       
       {/* ตัวกรองภูมิภาค */}
       <FilterByRegion isDarkMode={isDarkMode} onRegionChange={handleRegionChange} regions={regions} />
-
+      </div>
       {/* แสดงประเทศ */}
+        <div className="country-grid">
       {visibleCountries.map((country, index) => (
         <div key={index}  
           className={isDarkMode ? 'display-information-dark' : 'display-information-light'}
           onClick={() => navigate(`/country/${country.name.common}`)}
-          style={{ cursor: "pointer" }}
+      
         >
           <img src={country.flags.png} className='flag-country' alt="flag" />
           <div style={{width:"80%",paddingTop:"20px",paddingBottom:"40px"}}>
@@ -94,6 +96,7 @@ const DisplayInformation = ({ isDarkMode }) => {
           </div>
         </div>
       ))}
+      </div>
       <div ref={loaderRef}></div>
     </>
   );

@@ -10,15 +10,17 @@
 .country-detail-light {
   background-color:  hsl(0, 0%, 100%);
   color: #333;
+  width: 80%;
 }
 
 .country-detail-dark {
   background-color: hsl(207, 26%, 17%);
   color: #f5f5f5;
+  width: 80%;
 }
 
-.back-button {
-  background-color: #007bff;
+.back-button-dark {
+  background-color:hsl(209, 23%, 22%); 
   color: white;
   padding: 10px 20px;
   border: none;
@@ -29,26 +31,39 @@
   margin-bottom: 20px;
 }
 
-.back-button:hover {
-  background-color: #0056b3;
+.back-button-dark:hover {
+  background-color: hsl(0, 0%, 52%);
+}
+
+.back-button-light {
+  background-color:hsl(0, 0%, 98%);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  margin-bottom: 20px;
+  border: 0.25px solid black;
+}
+
+.back-button-light:hover {
+  background-color: hsl(0, 0%, 52%);
 }
 
 .country-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  max-width: 800px;
-  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
   border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
 
 .country-flag {
   width: 100%;
-  max-width: 300px;
+  max-width: 90%;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -79,9 +94,9 @@
 }
 
 .border-button {
-  background-color: #ff9800;
+  background-color: hsl(0, 0%, 52%);
   color: white;
-  padding: 8px 15px;
+  padding: 5px 15px;
   border-radius: 5px;
   text-decoration: none;
   font-size: 14px;
@@ -89,5 +104,52 @@
 }
 
 .border-button:hover {
-  background-color: #e68900;
+  background-color: hsl(207, 26%, 17%);
+}
+
+.position-back-button{
+  width: 100%;
+}
+
+
+@media (min-width:1024px) {
+  .country-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  border-radius: 10px;
+  transition: 0.3s;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+.space-image-display{
+  width: 70%;
+}
+.country-info{
+  width: 30%;
+}
+
+.country-flag {
+  width: 100%;
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.country-detail-dark{
+  width: 100%;
+}
+
+.country-detail-light{
+   width:100%;
+
+}
+
+.position-back-button{
+  width: 80%;
+}
+
 }
