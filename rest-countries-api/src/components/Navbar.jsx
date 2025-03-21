@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Moon from "../assets/moon";
+import Moon from "../assets/Moon.jsx";
 
 const Navbar = ({isDarkMode,setIsDarkMode}) => {
 
